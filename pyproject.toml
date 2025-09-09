@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "port-scanner"
+version = "1.0.0"
+authors = [
+  { name="Your Name", email="your.email@example.com" },
+]
+description = "A fast, multi-threaded port scanner"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.12b0",
+    "isort>=5.10.1",
+    "mypy>=0.910",
+    "pylint>=2.12.2"
+]
+
+[project.scripts]
+port-scanner = "port_scanner.scanner:main"
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/port-scanner"
+"Bug Tracker" = "https://github.com/yourusername/port-scanner/issues"
